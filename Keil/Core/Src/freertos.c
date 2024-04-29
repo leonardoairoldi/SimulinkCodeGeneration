@@ -163,7 +163,7 @@ void MX_FREERTOS_Init(void) {
 void Idle_task(void const * argument)
 {
   /* USER CODE BEGIN Idle_task */
-	//Simulink_Init();
+	Simulink_Init();
 	osTimerStart(TimerFSMHandle, 50); // @20 Hz
 	osTimerStart(TimerMODELHandle, 5); // @200 Hz
   /* Infinite loop */
@@ -190,9 +190,9 @@ void Model_task(void const * argument)
   {
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 		switch_state_set();
-		//ModelInputUnpack_Simulink();
-		//Model_Simulink();
-		//ModelOutputPack_Simulink();
+		ModelInputUnpack_Simulink();
+		Model_Simulink();
+		ModelOutputPack_Simulink();
   }
   /* USER CODE END Model_task */
 }

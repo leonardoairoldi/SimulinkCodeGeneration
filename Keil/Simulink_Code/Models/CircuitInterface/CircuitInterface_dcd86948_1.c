@@ -24,7 +24,7 @@ void CircuitInterface_dcd86948_1_dae( NeDae **dae, const NeModelParameters
      get_auto_linear_algebra());
   NeRtpValues *rtpValues = NULL;
   ne_allocator = pm_default_allocator();
-  ne_dae_create( dae,
+	ne_dae_create( dae,
                 CircuitInterface_dcd86948_1_dae_ds( ne_allocator ),
                 NULL,
                 FALSE,
