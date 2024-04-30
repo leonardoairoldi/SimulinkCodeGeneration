@@ -9,9 +9,50 @@
  *
  * Model version                  : 1.15
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Apr 28 18:20:31 2024
+ * C/C++ source code generated on : Tue Apr 30 10:13:33 2024
  */
 
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * File: complex_types.h
+ *
+ * Code generated for Simulink model 'CircuitInterface'.
+ *
+ * Model version                  : 1.39
+ * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
+ * C/C++ source code generated on : Tue Apr 30 10:13:23 2024
+ */
+
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * File: complex_types.h
+ *
+ * Code generated for Simulink model 'CircuitInterface'.
+ *
+ * Model version                  : 1.39
+ * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
+ * C/C++ source code generated on : Tue Apr 30 10:12:59 2024
+ */
+
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * File: complex_types.h
+ *
+ * Code generated for Simulink model 'SMKCODEACADEMY'.
+ *
+ * Model version                  : 1.15
+ * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
+ * C/C++ source code generated on : Tue Apr 30 09:35:21 2024
+ */
 #ifndef COMPLEX_TYPES_H
 #define COMPLEX_TYPES_H
 #include <stdint.h>
@@ -76,6 +117,24 @@ typedef struct {
 } cuint32_T;
 
 #endif                                 /* COMPLEX_TYPES_H */
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */
 
 /*
  * File trailer for generated code.

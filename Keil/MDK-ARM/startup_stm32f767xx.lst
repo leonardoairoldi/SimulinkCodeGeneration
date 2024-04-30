@@ -983,7 +983,7 @@ interwork --depend=smkcodeacademy\startup_stm32f767xx.d -osmkcodeacademy\startu
 p_stm32f767xx.o -I../Core/Inc -I.\RTE\_SMKCODEACADEMY -IC:\Users\leona\AppData\
 Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include -IC:\Users\leona\AppData\Loc
 al\Arm\Packs\Keil\STM32F7xx_DFP\2.15.1\Drivers\CMSIS\Device\ST\STM32F7xx\Includ
-e --predefine="__UVISION_VERSION SETA 538" --predefine="_RTE_ SETA 1" --predefi
+e --predefine="__UVISION_VERSION SETA 537" --predefine="_RTE_ SETA 1" --predefi
 ne="STM32F767xx SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f767xx.l
 st startup_stm32f767xx.s
 

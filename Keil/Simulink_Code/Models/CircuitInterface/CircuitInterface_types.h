@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
- * Model version                  : 1.34
+ * Model version                  : 1.39
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Apr 28 18:20:15 2024
+ * C/C++ source code generated on : Tue Apr 30 10:13:23 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -22,10 +22,6 @@
 #include "ELECTRICAL_typedef.h"
 #include "FSM_typedef.h"
 #include "GLOBAL_typedef.h"
-
-/* Forward declaration for rtModel */
-typedef struct tag_RTM_CircuitInterface_T RT_MODEL_CircuitInterface_T;
-
 #endif                                /* RTW_HEADER_CircuitInterface_types_h_ */
 
 /*

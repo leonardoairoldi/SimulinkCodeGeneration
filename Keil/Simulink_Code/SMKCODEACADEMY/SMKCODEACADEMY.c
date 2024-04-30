@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.15
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Apr 28 18:20:31 2024
+ * C/C++ source code generated on : Tue Apr 30 10:13:33 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -34,31 +34,14 @@ void ModelInputUnpack_Simulink(void)
 {
   /* ModelReference: '<Root>/Circuit' */
   CircuitInterfaceTID0(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb));
-
-  /* Update absolute time */
-  /* The "clockTick0" counts the number of times the code of this task has
-   * been executed. The resolution of this integer timer is 0.005, which is the step size
-   * of the task. Size of "clockTick0" ensures timer will not overflow during the
-   * application lifespan selected.
-   */
-  SMKCODEACADEMY_M->Timing.clockTick0++;
 }
 
 /* Model step function for TID1 */
 void Model_Simulink(void)           /* Explicit Task: Circuit.CiruitSubsystem */
 {
   /* ModelReference: '<Root>/Circuit' */
-  CircuitInterfaceTID1(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtm),
-                       &(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb),
+  CircuitInterfaceTID1(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb),
                        &(SMKCODEACADEMY_DW.Circuit_InstanceData.rtdw));
-
-  /* Update absolute time */
-  /* The "clockTick1" counts the number of times the code of this task has
-   * been executed. The resolution of this integer timer is 0.005, which is the step size
-   * of the task. Size of "clockTick1" ensures timer will not overflow during the
-   * application lifespan selected.
-   */
-  SMKCODEACADEMY_M->Timing.clockTick1++;
 }
 
 /* Model step function for TID2 */
@@ -66,14 +49,6 @@ void ModelOutputPack_Simulink(void) /* Explicit Task: Circuit.ModelOutputPack */
 {
   /* ModelReference: '<Root>/Circuit' */
   CircuitInterfaceTID2(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb));
-
-  /* Update absolute time */
-  /* The "clockTick2" counts the number of times the code of this task has
-   * been executed. The resolution of this integer timer is 0.005, which is the step size
-   * of the task. Size of "clockTick2" ensures timer will not overflow during the
-   * application lifespan selected.
-   */
-  SMKCODEACADEMY_M->Timing.clockTick2++;
 }
 
 /* Model step function for TID3 */
@@ -96,17 +71,12 @@ void Simulink_Init(void)
 
   /* Model Initialize function for ModelReference Block: '<Root>/Circuit' */
   CircuitInterface_initialize();
-
-  /* SystemInitialize for ModelReference: '<Root>/Circuit' */
-  CircuitInterface_Init(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb),
-                        &(SMKCODEACADEMY_DW.Circuit_InstanceData.rtdw));
 }
 
 /* Model terminate function */
 void Simulink_End(void)
 {
-  /* Terminate for ModelReference: '<Root>/Circuit' */
-  CircuitInterface_Term(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtdw));
+  /* (no terminate code required) */
 }
 
 /*
