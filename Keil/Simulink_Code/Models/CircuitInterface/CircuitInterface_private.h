@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
- * Model version                  : 1.39
+ * Model version                  : 1.50
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Tue Apr 30 10:13:23 2024
+ * C/C++ source code generated on : Mon May  6 16:22:41 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -72,6 +72,16 @@ select the Enable portable word sizes option on the Code Generation > \
 Verification pane for ERT based targets, which will disable the \
 preprocessor word size checks.
 #endif
+
+extern const uint8_t rtCP_pooled_Jy6xae4zx2O0[100];
+extern const uint8_t rtCP_pooled_CH4j98SUmRRm[100];
+
+#define rtCP_OCV_tableData             rtCP_pooled_Jy6xae4zx2O0  /* Computed Parameter: rtCP_OCV_tableData
+                                                                  * Referenced by: '<S1>/OCV'
+                                                                  */
+#define rtCP_OCV_bp01Data              rtCP_pooled_CH4j98SUmRRm  /* Computed Parameter: rtCP_OCV_bp01Data
+                                                                  * Referenced by: '<S1>/OCV'
+                                                                  */
 
 /* Exported data declaration */
 

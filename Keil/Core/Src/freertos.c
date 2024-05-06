@@ -189,7 +189,7 @@ void Model_task(void const * argument)
   for(;;)
   {
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-		switch_state_set();
+		
 		ModelInputUnpack_Simulink();
 		Model_Simulink();
 		ModelOutputPack_Simulink();
@@ -211,6 +211,7 @@ void Fsm_task(void const * argument)
   for(;;)
   {
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		hwswitch_state_set();
     FSM_Simulink();
   }
   /* USER CODE END Fsm_task */

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
- * Model version                  : 1.39
+ * Model version                  : 1.50
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Tue Apr 30 10:13:23 2024
+ * C/C++ source code generated on : Mon May  6 16:22:41 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -31,17 +31,17 @@
 
 /* Block signals for model 'CircuitInterface' */
 typedef struct {
-  double Pin;                          /* '<Root>/Model' */
   float TmpRTBAtModelInputUnpackOutport;/* '<Root>/ModelInputUnpack' */
-  float Vout;                          /* '<Root>/Model' */
-  float Vin;                           /* '<Root>/Model' */
+  float TmpRTBAtModelInputUnpackOutpo_m;/* '<Root>/ModelInputUnpack' */
+  float TmpRTBAtModelInputUnpackOutpo_n;/* '<Root>/ModelInputUnpack' */
+  float TmpRTBAtModelOutport1;         /* '<Root>/Model' */
+  float TmpRTBAtModelOutport2;         /* '<Root>/Model' */
+  uint8_t TmpRTBAtModelInputUnpackOutpo_f;/* '<Root>/ModelInputUnpack' */
 } B_CircuitInterface_c_T;
 
 /* Block states (default storage) for model 'CircuitInterface' */
 typedef struct {
-  double DiscreteTimeIntegrator_DSTATE;/* '<S1>/Discrete-Time Integrator' */
   float DiscreteTransferFcn_states;    /* '<S1>/Discrete Transfer Fcn' */
-  int8_t DiscreteTimeIntegrator_PrevRese;/* '<S1>/Discrete-Time Integrator' */
 } DW_CircuitInterface_f_T;
 
 typedef struct {
@@ -55,6 +55,17 @@ extern void CircuitInterfaceTID0(B_CircuitInterface_c_T *localB);
 extern void CircuitInterfaceTID1(B_CircuitInterface_c_T *localB,
   DW_CircuitInterface_f_T *localDW);
 extern void CircuitInterfaceTID2(B_CircuitInterface_c_T *localB);
+
+/*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<S1>/Constant' : Unused code path elimination
+ * Block '<S2>/Constant3' : Unused code path elimination
+ * Block '<S2>/Equal3' : Unused code path elimination
+ * Block '<S2>/Gain3' : Unused code path elimination
+ * Block '<S2>/Gain4' : Unused code path elimination
+ * Block '<S1>/Cast' : Eliminate redundant data type conversion
+ */
 
 /*-
  * The generated code includes comments that allow you to trace directly

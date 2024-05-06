@@ -2,9 +2,10 @@ classdef FSM_STATE_e < Simulink.IntEnumType
     % MATLAB enumeration class definition generated from template
     
     enumeration
-        FSM_SENSE(0),
-		FSM_OVERVOLTAGE(1),
-		FSM_OVERVOLTAGE_FAULT(2)
+        FAULT(0),
+		TS_OFF(1),
+		PRECHARGE(2),
+		TS_ON(3)
     end
 
     methods (Static)
@@ -12,7 +13,7 @@ classdef FSM_STATE_e < Simulink.IntEnumType
         function defaultValue = getDefaultValue()
             % GETDEFAULTVALUE  Returns the default enumerated value.
             %   If this method is not defined, the first enumeration is used.
-            defaultValue = FSM_STATE_e.FSM_SENSE;
+            defaultValue = FSM_STATE_e.FAULT;
         end
 
         function dScope = getDataScope()

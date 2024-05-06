@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
- * Model version                  : 1.35
+ * Model version                  : 1.50
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Tue Apr 30 09:35:05 2024
+ * C/C++ source code generated on : Mon May  6 16:22:41 2024
  */
 
 #include "rtGetNaN.h"

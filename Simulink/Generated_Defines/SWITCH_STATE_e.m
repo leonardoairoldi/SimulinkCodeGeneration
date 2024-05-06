@@ -2,8 +2,10 @@ classdef SWITCH_STATE_e < Simulink.IntEnumType
     % MATLAB enumeration class definition generated from template
     
     enumeration
-        SWITCH_CLOSED(0),
-		SWITTCH_OPEN(1)
+        SWITCH_OPEN(0),
+		SWITCH_PRECHARGE(1),
+		SWITCH_DISCHARGE(2),
+		SWITCH_CLOSED(3)
     end
 
     methods (Static)
@@ -11,7 +13,7 @@ classdef SWITCH_STATE_e < Simulink.IntEnumType
         function defaultValue = getDefaultValue()
             % GETDEFAULTVALUE  Returns the default enumerated value.
             %   If this method is not defined, the first enumeration is used.
-            defaultValue = SWITCH_STATE_e.SWITCH_CLOSED;
+            defaultValue = SWITCH_STATE_e.SWITCH_OPEN;
         end
 
         function dScope = getDataScope()

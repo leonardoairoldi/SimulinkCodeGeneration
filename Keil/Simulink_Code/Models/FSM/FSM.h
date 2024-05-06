@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'FSM'.
  *
- * Model version                  : 1.10
+ * Model version                  : 1.30
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Tue Apr 30 09:35:14 2024
+ * C/C++ source code generated on : Mon May  6 16:23:02 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -32,6 +32,8 @@
 typedef struct {
   uint8_t is_active_c3_FSM;            /* '<S1>/OVDetector' */
   uint8_t is_c3_FSM;                   /* '<S1>/OVDetector' */
+  uint8_t SMKACADEMY_fsm_hw_switch_prev;/* '<S1>/OVDetector' */
+  uint8_t SMKACADEMY_fsm_hw_switch_start;/* '<S1>/OVDetector' */
 } DW_FSM_f_T;
 
 typedef struct {

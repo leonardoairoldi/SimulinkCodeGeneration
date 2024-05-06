@@ -1354,6 +1354,16 @@
               <FileType>1</FileType>
               <FilePath>..\Simulink_Code\Models\_sharedutils\rtGetNaN.c</FilePath>
             </File>
+            <File>
+              <FileName>const_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Simulink_Code\Models\_sharedutils\const_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>look1_iu8lu32n24_binlcse.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Simulink_Code\Models\_sharedutils\look1_iu8lu32n24_binlcse.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

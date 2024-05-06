@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SMKCODEACADEMY'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.18
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Tue Apr 30 10:13:33 2024
+ * C/C++ source code generated on : Mon May  6 16:29:40 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -29,6 +29,13 @@ static RT_MODEL_SMKCODEACADEMY_T SMKCODEACADEMY_M_;
 RT_MODEL_SMKCODEACADEMY_T *const SMKCODEACADEMY_M = &SMKCODEACADEMY_M_;
 
 /* Model step function for TID0 */
+void ModelOutputPack_Simulink(void) /* Explicit Task: Circuit.ModelOutputPack */
+{
+  /* ModelReference: '<Root>/Circuit' */
+  CircuitInterfaceTID2(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb));
+}
+
+/* Model step function for TID1 */
 void ModelInputUnpack_Simulink(void)
                                    /* Explicit Task: Circuit.ModelInputUnpack */
 {
@@ -36,19 +43,12 @@ void ModelInputUnpack_Simulink(void)
   CircuitInterfaceTID0(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb));
 }
 
-/* Model step function for TID1 */
+/* Model step function for TID2 */
 void Model_Simulink(void)           /* Explicit Task: Circuit.CiruitSubsystem */
 {
   /* ModelReference: '<Root>/Circuit' */
   CircuitInterfaceTID1(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb),
                        &(SMKCODEACADEMY_DW.Circuit_InstanceData.rtdw));
-}
-
-/* Model step function for TID2 */
-void ModelOutputPack_Simulink(void) /* Explicit Task: Circuit.ModelOutputPack */
-{
-  /* ModelReference: '<Root>/Circuit' */
-  CircuitInterfaceTID2(&(SMKCODEACADEMY_DW.Circuit_InstanceData.rtb));
 }
 
 /* Model step function for TID3 */

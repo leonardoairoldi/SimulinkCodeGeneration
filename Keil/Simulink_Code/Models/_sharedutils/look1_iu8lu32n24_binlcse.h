@@ -3,7 +3,7 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: rtGetNaN.h
+ * File: look1_iu8lu32n24_binlcse.h
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
@@ -12,14 +12,16 @@
  * C/C++ source code generated on : Mon May  6 16:22:41 2024
  */
 
-#ifndef RTW_HEADER_rtGetNaN_h_
-#define RTW_HEADER_rtGetNaN_h_
-#include "rt_nonfinite.h"
+#ifndef RTW_HEADER_look1_iu8lu32n24_binlcse_h_
+#define RTW_HEADER_look1_iu8lu32n24_binlcse_h_
+#include <stdbool.h>
+#include <stdint.h>
+#include "complex_types.h"
 
-extern double rtGetNaN(void);
-extern float rtGetNaNF(void);
+extern uint8_t look1_iu8lu32n24_binlcse(uint8_t u0, const uint8_t bp0[], const
+  uint8_t table[], uint32_t maxIndex);
 
-#endif                                 /* RTW_HEADER_rtGetNaN_h_ */
+#endif                              /* RTW_HEADER_look1_iu8lu32n24_binlcse_h_ */
 
 /*
  * File trailer for generated code.

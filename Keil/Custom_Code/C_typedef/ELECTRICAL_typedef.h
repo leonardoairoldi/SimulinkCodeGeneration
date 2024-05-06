@@ -5,14 +5,17 @@
 
 
 typedef enum {
-    SWITCH_CLOSED = 0,
-    SWITTCH_OPEN
+    SWITCH_OPEN = 0,
+		SWITCH_PRECHARGE,
+    SWITCH_DISCHARGE,
+		SWITCH_CLOSED
 } SWITCH_STATE_e;
 
 typedef struct {
-    uint16_t Vin;   // mV
-    uint16_t Vout;  // mV
-    uint16_t Pin;   // mW
+    uint16_t vTSAcc;   // V
+    uint16_t vSumOfCells;  // V
+    uint8_t perSOC;   // mW
+		uint16_t iTSAcc; // mA
     SWITCH_STATE_e switch_state;
 } ELECTRICAL_t;
 
