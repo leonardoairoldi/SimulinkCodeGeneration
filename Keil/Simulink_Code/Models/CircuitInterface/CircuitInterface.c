@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
- * Model version                  : 1.50
+ * Model version                  : 1.52
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Mon May  6 16:22:41 2024
+ * C/C++ source code generated on : Mon May  6 17:05:39 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -47,12 +47,12 @@ void CircuitInterfaceTID0(B_CircuitInterface_c_T *localB)
     (SMKACADEMY.electrical.switch_state == SWITCH_PRECHARGE);
 
   /* RateTransition generated from: '<Root>/ModelInputUnpack' incorporates:
-   *  Constant: '<S2>/Constant2'
-   *  DataStoreRead: '<S2>/Data Store Read2'
-   *  RelationalOperator: '<S2>/Equal2'
+   *  Constant: '<S2>/Constant3'
+   *  DataStoreRead: '<S2>/Data Store Read3'
+   *  RelationalOperator: '<S2>/Equal3'
    */
-  localB->TmpRTBAtModelInputUnpackOutpo_n = (float)
-    (SMKACADEMY.electrical.switch_state == SWITCH_DISCHARGE);
+  localB->TmpRTBAtModelInputUnpackOutpo_o = (float)
+    (SMKACADEMY.electrical.switch_state == SWITCH_CLOSED);
 
   /* End of Outputs for SubSystem: '<Root>/ModelInputUnpack' */
 
@@ -66,13 +66,12 @@ void CircuitInterfaceTID0(B_CircuitInterface_c_T *localB)
 void CircuitInterfaceTID1(B_CircuitInterface_c_T *localB,
   DW_CircuitInterface_f_T *localDW)
 {
-  float numAccum;
-  float tmp;
+  float rtb_Delay1;
   int32_t rtb_Gain_d;
 
   /* Outputs for Atomic SubSystem: '<Root>/Model' */
-  /* DiscreteTransferFcn: '<S1>/Discrete Transfer Fcn' */
-  numAccum = 0.004988F * localDW->DiscreteTransferFcn_states;
+  /* Delay: '<S1>/Delay1' */
+  rtb_Delay1 = localDW->Delay1_DSTATE;
 
   /* Gain: '<S1>/Gain' incorporates:
    *  Lookup_n-D: '<S1>/OCV'
@@ -82,43 +81,48 @@ void CircuitInterfaceTID1(B_CircuitInterface_c_T *localB,
     (localB->TmpRTBAtModelInputUnpackOutpo_f, rtCP_OCV_bp01Data,
      rtCP_OCV_tableData, 99U);
 
-  /* Switch: '<S1>/Switch' incorporates:
-   *  DiscreteTransferFcn: '<S1>/Discrete Transfer Fcn'
+  /* Switch: '<S1>/Switch2' incorporates:
+   *  Delay: '<S1>/Delay1'
+   *  DiscreteTransferFcn: '<S1>/Discrete Transfer Fcn1'
    */
-  if (localB->TmpRTBAtModelInputUnpackOutport != 0.0F) {
-    tmp = numAccum;
+  if (localB->TmpRTBAtModelInputUnpackOutpo_o != 0.0F) {
+    localDW->Delay1_DSTATE = (float)rtb_Gain_d;
   } else {
-    tmp = (float)rtb_Gain_d;
+    localDW->Delay1_DSTATE = 0.004988F * localDW->DiscreteTransferFcn1_states;
   }
 
-  /* Update for DiscreteTransferFcn: '<S1>/Discrete Transfer Fcn' incorporates:
-   *  Switch: '<S1>/Switch'
+  /* End of Switch: '<S1>/Switch2' */
+
+  /* Switch: '<S1>/Switch3' */
+  if (!(localB->TmpRTBAtModelInputUnpackOutport != 0.0F)) {
+    /* Switch: '<S1>/Switch' incorporates:
+     *  Constant: '<S1>/Constant1'
+     *  Switch: '<S1>/Switch3'
+     */
+    if (localB->TmpRTBAtModelInputUnpackOutpo_m != 0.0F) {
+      rtb_Delay1 = (float)rtb_Gain_d;
+    } else {
+      rtb_Delay1 = 0.0F;
+    }
+
+    /* End of Switch: '<S1>/Switch' */
+  }
+
+  /* Update for DiscreteTransferFcn: '<S1>/Discrete Transfer Fcn1' incorporates:
+   *  Switch: '<S1>/Switch3'
    */
-  localDW->DiscreteTransferFcn_states = tmp - -0.995F *
-    localDW->DiscreteTransferFcn_states;
+  localDW->DiscreteTransferFcn1_states = rtb_Delay1 - -0.995F *
+    localDW->DiscreteTransferFcn1_states;
 
   /* End of Outputs for SubSystem: '<Root>/Model' */
 
   /* RateTransition generated from: '<Root>/Model' */
   localB->TmpRTBAtModelOutport1 = (float)rtb_Gain_d;
 
-  /* Outputs for Atomic SubSystem: '<Root>/Model' */
-  /* Switch: '<S1>/Switch1' incorporates:
-   *  Logic: '<S1>/OR'
+  /* RateTransition generated from: '<Root>/Model' incorporates:
+   *  Delay: '<S1>/Delay1'
    */
-  if ((localB->TmpRTBAtModelInputUnpackOutpo_m != 0.0F) ||
-      (localB->TmpRTBAtModelInputUnpackOutpo_n != 0.0F)) {
-    /* RateTransition generated from: '<Root>/Model' incorporates:
-     *  DiscreteTransferFcn: '<S1>/Discrete Transfer Fcn'
-     */
-    localB->TmpRTBAtModelOutport2 = numAccum;
-  } else {
-    /* RateTransition generated from: '<Root>/Model' */
-    localB->TmpRTBAtModelOutport2 = (float)rtb_Gain_d;
-  }
-
-  /* End of Switch: '<S1>/Switch1' */
-  /* End of Outputs for SubSystem: '<Root>/Model' */
+  localB->TmpRTBAtModelOutport2 = localDW->Delay1_DSTATE;
 }
 
 /* Output and update for referenced model: 'CircuitInterface' */
