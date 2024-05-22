@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'CircuitInterface'.
  *
- * Model version                  : 1.52
+ * Model version                  : 1.58
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Mon May  6 17:05:39 2024
+ * C/C++ source code generated on : Thu May 23 00:55:02 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -32,11 +32,11 @@
 /* Block signals for model 'CircuitInterface' */
 typedef struct {
   float TmpRTBAtModelInputUnpackOutport;/* '<Root>/ModelInputUnpack' */
-  float TmpRTBAtModelInputUnpackOutpo_m;/* '<Root>/ModelInputUnpack' */
+  float TmpRTBAtModelInputUnpackOutpo_f;/* '<Root>/ModelInputUnpack' */
   float TmpRTBAtModelInputUnpackOutpo_o;/* '<Root>/ModelInputUnpack' */
   float TmpRTBAtModelOutport1;         /* '<Root>/Model' */
   float TmpRTBAtModelOutport2;         /* '<Root>/Model' */
-  uint8_t TmpRTBAtModelInputUnpackOutpo_f;/* '<Root>/ModelInputUnpack' */
+  uint8_t TmpRTBAtModelInputUnpackOutpo_n;/* '<Root>/ModelInputUnpack' */
 } B_CircuitInterface_c_T;
 
 /* Block states (default storage) for model 'CircuitInterface' */
@@ -64,7 +64,6 @@ extern void CircuitInterfaceTID2(B_CircuitInterface_c_T *localB);
  * Block '<S2>/Constant2' : Unused code path elimination
  * Block '<S2>/Equal2' : Unused code path elimination
  * Block '<S2>/Gain2' : Unused code path elimination
- * Block '<S2>/Gain4' : Unused code path elimination
  * Block '<S1>/Cast' : Eliminate redundant data type conversion
  */
 

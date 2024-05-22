@@ -5,6 +5,34 @@
  *
  * File: complex_types.h
  *
+ * Code generated for Simulink model 'SMKCODEACADEMY'.
+ *
+ * Model version                  : 1.19
+ * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
+ * C/C++ source code generated on : Thu May 23 00:55:29 2024
+ */
+
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * File: complex_types.h
+ *
+ * Code generated for Simulink model 'CircuitInterface'.
+ *
+ * Model version                  : 1.58
+ * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
+ * C/C++ source code generated on : Thu May 23 00:55:02 2024
+ */
+
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * File: complex_types.h
+ *
  * Code generated for Simulink model 'CircuitInterface'.
  *
  * Model version                  : 1.52
@@ -103,6 +131,18 @@ typedef struct {
 } cuint32_T;
 
 #endif                                 /* COMPLEX_TYPES_H */
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */
 
 /*
  * File trailer for generated code.

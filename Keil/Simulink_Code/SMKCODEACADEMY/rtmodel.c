@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SMKCODEACADEMY'.
  *
- * Model version                  : 1.18
+ * Model version                  : 1.19
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Mon May  6 16:29:40 2024
+ * C/C++ source code generated on : Thu May 23 00:55:29 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -24,15 +24,15 @@ void SMKCODEACADEMY_step(int tid)
 {
   switch (tid) {
    case 0 :
-    ModelOutputPack_Simulink();
-    break;
-
-   case 1 :
     ModelInputUnpack_Simulink();
     break;
 
-   case 2 :
+   case 1 :
     Model_Simulink();
+    break;
+
+   case 2 :
+    ModelOutputPack_Simulink();
     break;
 
    case 3 :

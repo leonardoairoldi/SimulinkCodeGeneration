@@ -1364,6 +1364,11 @@
               <FileType>1</FileType>
               <FilePath>..\Simulink_Code\Models\_sharedutils\look1_iu8lu32n24_binlcse.c</FilePath>
             </File>
+            <File>
+              <FileName>look1_iu8lftf_binlcpw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Simulink_Code\Models\_sharedutils\look1_iu8lftf_binlcpw.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

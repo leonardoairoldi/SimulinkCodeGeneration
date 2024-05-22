@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SMKCODEACADEMY'.
  *
- * Model version                  : 1.18
+ * Model version                  : 1.19
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Mon May  6 16:29:40 2024
+ * C/C++ source code generated on : Thu May 23 00:55:29 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
